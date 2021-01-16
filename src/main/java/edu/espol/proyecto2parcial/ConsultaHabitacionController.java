@@ -60,6 +60,6 @@ public class ConsultaHabitacionController implements Initializable {
     @FXML
     private void cambioVentana2() throws IOException {
         App.setRoot("EscogerHotel");
-        print("hola mundo")
+        
     }
 }
