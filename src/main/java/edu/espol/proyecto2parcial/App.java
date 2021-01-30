@@ -1,5 +1,9 @@
 package edu.espol.proyecto2parcial;
 
+import edu.espol.modelos.HDoble;
+import edu.espol.modelos.HMatrimonial;
+import edu.espol.modelos.Habitacion;
+import edu.espol.modelos.Hotel;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -7,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -15,6 +20,7 @@ import java.util.List;
  */
 public class App extends Application {
     //public static List<String> clases = Arrays.asList(new String[]{"1","2","3"});
+    public static ArrayList<Hotel> hoteles = new ArrayList<>();
     private static Scene scene;
 
     @Override
@@ -22,7 +28,9 @@ public class App extends Application {
         scene = new Scene(loadFXML("EscogerHotel"), 1080, 720);
         stage.setScene(scene);
         stage.setTitle("Creacion Hotel");
+        
         stage.show();
+        
     }
 
     static void setRoot(String fxml) throws IOException {
@@ -35,6 +43,10 @@ public class App extends Application {
     }
 
     public static void main(String[] args) {
+        //Habitacion ha = new HDoble("dadada", "dadada", "dadada","dada");
+        //System.out.println(ha.getPrecio());
+        //Hotel.habitaciones.add(ha);
+        
         launch();
     }
 
